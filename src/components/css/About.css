@@ -1,0 +1,152 @@
+.about-us-section {
+    background-color: #f8f9fa;
+    margin-top: 100px;
+    padding: 50px 20px;
+}
+
+/* العنوان */
+.section-title {
+    font-weight: bold;
+    color: #13294b;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.section-title > span > a {
+    text-decoration: none;
+}
+
+.underline {
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 5px;
+}
+
+/* النصوص */
+.section-text {
+    color: #555;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* أيقونات المعلومات */
+.icon {
+    color: #007bff;
+    margin-right: 5px;
+}
+
+/* حاوية الفيديو */
+.video-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container img {
+    border-radius: 8px;
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* زر التشغيل */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 123, 255, 0.8);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.play-button:hover {
+    background: rgba(0, 123, 255, 1);
+}
+
+/* ==================== تحسين الموبايل والتابلت ==================== */
+
+/* التابلت (حتى 992px) */
+@media (max-width: 992px) {
+    .about-us-section {
+        padding: 40px 20px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-text {
+        font-size: 1rem;
+    }
+
+    .video-container img {
+        width: 400px;
+    }
+
+    .play-button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+/* الموبايل (حتى 768px) */
+@media (max-width: 768px) {
+    .about-us-section {
+        margin-top: 50px;
+        padding: 30px 10px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .section-text {
+        font-size: 1rem;
+    }
+
+    /* جعل العناصر تتراص فوق بعضها */
+    .row {
+        flex-direction: column-reverse;
+    }
+
+    .video-container img {
+        width: 350px;
+    }
+
+    .play-button {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+
+/* الشاشات الصغيرة جدًا (حتى 480px) */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .section-text {
+        font-size: 0.95rem;
+    }
+
+    .video-container img {
+        width: 100%;
+    }
+
+    .play-button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}

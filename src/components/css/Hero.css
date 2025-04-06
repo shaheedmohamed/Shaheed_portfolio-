@@ -1,0 +1,86 @@
+/* Default Styles */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: #f4f4f4;
+    position: relative;
+}
+
+.content {
+    flex: 1;
+    padding-right: 20px;
+    position: relative;
+    z-index: 2;  /* Ensure text is above the image */
+}
+
+.content h3, .content h1, .content h2 {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.play {
+    display: inline-flex;
+    align-items: center;
+}
+
+.play .btn-play {
+    background-color: #f7a500;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.play h5 {
+    margin-left: 10px;
+}
+
+/* Image Section */
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;  /* Smooth transition for opacity */
+}
+
+/* Media Queries */
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        position: relative;
+    }
+
+    /* Hide content section on mobile */
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 3; /* Ensure content is above image */
+    }
+
+    /* Reduce opacity of the image on mobile */
+    .image img {
+        opacity: 0.5;  /* Reduce opacity */
+    }
+}

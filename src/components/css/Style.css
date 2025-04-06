@@ -1,0 +1,262 @@
+
+/* تأكد أن الصفحة لا تتأثر بالمحتوى المثبت */
+body {
+    padding-top: 60px; /* اجعل الهامش العلوي يتناسب مع ارتفاع الـ navbar */
+}
+
+/* زر التبديل بين الوضعين */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+.theme-toggle:hover {
+    color: var(--highlight-color);
+}
+
+/* الوضع الداكن والفاتح */
+:root {
+    --navbar-bg: #f8f9fa;
+    --text-color: #333;
+    --highlight-color: #007bff;
+}
+
+/* Transition Smooth */
+body {
+    transition: all 0.4s ease;
+}
+
+/* Dark Mode Base */
+.dark-mode {
+    background-color: #121212 !important;
+    color: #f5f5f5 !important;
+}
+
+/* Dark Navbar */
+.dark-mode .navbar {
+    background-color: #1f1f1f !important;
+}
+
+/* Dark links */
+.dark-mode .nav-link {
+    color: #f5f5f5 !important;
+}
+
+/* Sections */
+.dark-mode section,
+.dark-mode .container,
+.dark-mode .row,
+.dark-mode .col,
+.dark-mode .card,
+.dark-mode .btn {
+    background-color: transparent !important;
+    color: #f5f5f5 !important;
+}
+
+/* Optional: Dark mode for buttons */
+.dark-mode .btn {
+    border-color: #f5f5f5;
+    color: #f5f5f5;
+}
+
+
+
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    min-height: 100vh;
+    background: #f9f9f9 no-repeat left top;
+    background-size: 500px;
+    overflow: hidden;
+}
+
+.content h3 {
+    color: #6c5ce7;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.content h2 {
+    font-size: 22px;
+    color: #6c5ce7;
+    min-height: 30px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.btn {
+    background: #6c5ce7;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #5a4ecb;
+}
+
+.play {
+    display: flex;
+    align-items: center;
+}
+
+.btn-play {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #6c5ce7;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.btn-play:hover {
+    background: #6c5ce7;
+    color: #fff;
+}
+
+.btn-play span {
+    color: #6c5ce7;
+    font-size: 20px;
+}
+
+.image img {
+    max-width: 100%;
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        background-position: center top;
+        background-size: 300px;
+    }
+
+    .content {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+}
+.portfolio-img {
+    position: relative;
+    overflow: hidden;
+    transition: .5s;
+}
+.portfolio-img img {
+    transition: .5s;
+}
+.portfolio-img:hover img {
+    transform: scale(1.1);
+}
+.portfolio-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: .5s;
+}
+.portfolio-img:hover .portfolio-btn {
+    opacity: 1;
+}
+
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background: #1e1e1e;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.project-text {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.project-button {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.project-card:hover .project-button {
+    opacity: 1;
+    transform: translateY(5px);
+    background: white;
+    color: black;
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        position: relative;
+    }
+
+    /* Hide content section on mobile */
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 3; /* Ensure content is above image */
+    }
+
+    /* Reduce opacity of the image on mobile */
+    .image img {
+        opacity: 0.5;  /* Reduce opacity */
+    }
+}
+
+
+
+

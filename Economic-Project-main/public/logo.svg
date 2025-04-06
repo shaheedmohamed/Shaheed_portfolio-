@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Scooter Base -->
+  <path d="M40 140 L160 140" stroke="#2563EB" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Wheels -->
+  <circle cx="60" cy="140" r="20" stroke="#2563EB" stroke-width="8" fill="none"/>
+  <circle cx="140" cy="140" r="20" stroke="#2563EB" stroke-width="8" fill="none"/>
+  
+  <!-- Handlebar -->
+  <path d="M120 140 L120 80 L100 80 L80 60" stroke="#2563EB" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Deck -->
+  <rect x="70" y="120" width="60" height="20" fill="#2563EB" rx="4"/>
+  
+  <!-- Battery Pack -->
+  <rect x="85" y="100" width="30" height="20" fill="#2563EB" rx="4"/>
+</svg> 
