@@ -44,15 +44,15 @@ const Navbar = () => {
                     </button>
                     <div className="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
                         <div className="navbar-nav ms-auto py-0 ">
-                            <Link to="/about" className="nav-item nav-link pe-5">About</Link>
-                            <Link to="/skill" className="nav-item nav-link pe-5">Skills</Link>
+                            <Link to="/about" className="nav-item nav-link pe-3">About</Link>
+                            <Link to="/skill" className="nav-item nav-link pe-3">Skills</Link>
                         </div>
                         <Link to="/" className="navbar-brand bg-secondary py-3 px-4 mx-3 d-none d-lg-block">
                             <h1 className="text-light fw-bold m-0 ">Shaheed</h1>
                         </Link>
                         <div className="navbar-nav me-auto py-0">
-                            <Link to="/projects" className="nav-item nav-link pe-5">Projects</Link>
-                            <Link to="/contact" className="nav-item nav-link pe-5">help ticket</Link>
+                            <Link to="/projects" className="nav-item nav-link pe-3">Projects</Link>
+                            <Link to="/contact" className="nav-item nav-link pe-3">Contact us</Link>
                         </div>
                         <div className="ms-3" style={{ cursor: "pointer", fontSize: "20px" }} onClick={() => setDarkMode(!darkMode)}>
                             {darkMode ? <FaSun color="#f5f5f5" /> : <FaMoon />}
@@ -65,9 +65,9 @@ const Navbar = () => {
                 <div className="bottom-navbar">
                     <Link to="/" className="bottom-nav-item"><FaHome /> <span>Home</span></Link>
                     <Link to="/about" className="bottom-nav-item"><FaUser /> <span>About</span></Link>
-                    <Link to="#skill" className="bottom-nav-item"><FaCode /> <span>Skills</span></Link>
+                    <Link to="/skill" className="bottom-nav-item"><FaCode /> <span>Skills</span></Link>
                     <Link to="/projects" className="bottom-nav-item"><FaProjectDiagram /> <span>Projects</span></Link>
-                    <Link to="/contact" className="bottom-nav-item"><FaEnvelope /> <span>help ticket</span></Link>
+                    <Link to="/contact" className="bottom-nav-item"><FaEnvelope /> <span>Contact us</span></Link>
                 </div>
             )}
         </>

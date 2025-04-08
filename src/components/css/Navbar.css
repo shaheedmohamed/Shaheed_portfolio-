@@ -33,7 +33,6 @@
     color: #0056b3;
 }
 
-/* إخفاء النافبار العادي على الموبايل */
 @media (max-width: 991px) {
     .navbar {
         display: none !important;
@@ -66,7 +65,6 @@
     position: relative;
 }
 
-/* الخط الأصفر تحت العنصر عند الـ Hover */
 .navbar-nav .nav-item::after {
     content: "";
     position: absolute;

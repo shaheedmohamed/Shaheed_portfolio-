@@ -1,13 +1,15 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { FaInfoCircle } from "react-icons/fa";
 import "./css/About.css";
+import shaheed from "./shaheed.png";
+
 
 const AboutUs = () => {
 
     return (
         <Container className="about-us-section py-5">
             <Row className="align-items-center">
-                {/* القسم الأول: المقدمة */}
+                
                 <Col md={6}>
                     <h2 className="section-title">
                         <span className="underline">About <a target="__blank" href="https://mostaql.com/u/shahid-1">Shaheed</a></span>
@@ -20,11 +22,11 @@ const AboutUs = () => {
                     </p>
                 </Col>
 
-                {/* القسم الثاني: الصورة */}
+                
                 <Col md={6} className="text-center">
-                    <div className="video-container">
+                    <div className="video-container w-50 mx-auto">
                         <img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHKrUKEg36MawWctKqSMgutsdjWK0PI-Ncfg&s"
+                            src={shaheed}
                             alt="About Us"
                             className="img-fluid"
                         />
@@ -33,7 +35,7 @@ const AboutUs = () => {
             </Row>
 
             <Row className="mt-5">
-                {/* القسم الثالث: التطوير المستمر */}
+
                 <Col md={6}>
                     <h3 className="section-subtitle">Passion for Technology</h3>
                     <p className="section-text">
@@ -50,10 +52,8 @@ const AboutUs = () => {
                     </p>
                 </Col>
 
-                {/* القسم الرابع: الشغف بالتكنولوجيا */}
             </Row>
 
-            {/* القسم الخامس: المعلومات التفصيلية */}
             <Row className="mt-5">
                 <Col md={6}>
                     <h3 className="section-subtitle">My Skills & Expertise</h3>
