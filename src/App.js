@@ -2,19 +2,17 @@ import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from "./components/NavBar";
-import "./App.css";
 import AboutUs from "./components/AboutUs.jsx";
 import Projects from "./components/ProjectHome.jsx";
 import Home from "./components/Home.jsx";
 import Footer from "./components/Footer.jsx";
 import ContactUs from "./components/ContactUs.jsx";
 import Skills from "./components/Skills.jsx";
+import "./App.css";
 
 function App() {
-
   useEffect(() => {
-    // إنشاء سكربت Tawk.to عند تحميل الصفحة
-    var script = document.createElement("script");
+    const script = document.createElement("script");
     script.async = true;
     script.src = "https://embed.tawk.to/67bdc268197a90190fc5c739/1ikujuqnc";
     script.charset = "UTF-8";
