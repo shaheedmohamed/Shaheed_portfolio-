@@ -2,9 +2,9 @@ import React from "react";
 import Navbar from "./NavBar";
 import HeroSection from "./Hero";
 import Projects from "./ProjectHome";
-import AboutUs from "./AboutUs";
+import AboutUs from "./Home/About";
 import ContactUs from "./ContactUs";
-import Skills from "./Skills";
+import Skills from "./SkilsHome";
 
 function Home() {
     return (

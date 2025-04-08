@@ -3,7 +3,6 @@ import { Container, Col } from "react-bootstrap";
 import {
     FaInstagram,
     FaFacebook,
-    FaTiktok,
     FaYoutube,
     FaLinkedin,
 } from "react-icons/fa";
@@ -15,7 +14,7 @@ const Footer = () => {
                 <Col className="d-flex justify-content-between">
                         <p className="mb-0">
                             &copy; 2025 Shaheed Mohamed. |
-                            <a
+                            <a target="__blank"
                                 href="https://mostaql.com/u/shahid-1"
                                 className="text-light ms-2"
                             >
@@ -24,19 +23,16 @@ const Footer = () => {
                         </p>
 
                         <div className="d-flex justify-content-center gap-3">
-                            <a href="#" title="insta" className="social-icon">
+                            <a target="__blank" href="#" title="insta" className="social-icon">
                                 <FaInstagram size={24} />
                             </a>
-                            <a href="#" title="facebook" className="social-icon">
+                            <a target="__blank" href="" title="facebook" className="social-icon">
                                 <FaFacebook size={24} />
                             </a>
-                            <a href="#" title="tiktok" className="social-icon">
-                                <FaTiktok size={24} />
-                            </a>
-                            <a href="#" className="social-icon">
+                            <a target="__blank" href="https://www.youtube.com/@Al-shaheed-o2e" className="social-icon">
                                 <FaYoutube size={24} />
                             </a>
-                            <a href="#" className="social-icon">
+                            <a target="__blank" href="https://www.linkedin.com/in/shaheed-mohamed-6618b3348/" className="social-icon">
                                 <FaLinkedin size={24} />
                             </a>
                         </div>

@@ -48,7 +48,7 @@ function Projects() {
     };
 
     return (
-        <div className='container'>
+        <div className='container border-bottom py-5'>
             <div className="row">
                 <div className="col text-center mb-5">
                     <h1 className="display-4 font-weight-bolder">Shaheed Projects</h1>
