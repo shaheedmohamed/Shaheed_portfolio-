@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import './css/Project.css';
 
 const projectData = [
@@ -9,7 +10,6 @@ const projectData = [
         link: "https://shaheeed.github.io/A2M/",
         image: "https://a2m.agency/wp-content/uploads/2019/12/newlogo.png",
     },
-    
     {
         title: "  El Gendy Group  ",
         type: "hTML & CSS & JS Website",
@@ -41,7 +41,7 @@ const projectData = [
 ];
 
 function Projects() {
-    const [visibleProjects, setVisibleProjects] = useState(3); 
+    const [visibleProjects, setVisibleProjects] = useState(3);
 
     const loadMoreProjects = () => {
         setVisibleProjects(prev => prev + 3);
@@ -55,10 +55,16 @@ function Projects() {
                     <p className="lead">Here are some of my projects.</p>
                 </div>
             </div>
-            
+
             <div className="row">
                 {projectData.slice(0, visibleProjects).map((project, index) => (
-                    <div className="col-sm-6 col-md-6 col-lg-4 mb-4" key={index}>
+                    <motion.div
+                        className="col-sm-6 col-md-6 col-lg-4 mb-4"
+                        key={index}
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                    >
                         <div className="card text-dark card-has-bg click-col" style={{ backgroundImage: `url('${project.image}')` }}>
                             <img className="card-img d-none" src={project.image} alt={project.title} />
                             <div className="card-img-overlay d-flex flex-column">
@@ -82,11 +88,10 @@ function Projects() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
 
-            {/* زر Load More */}
             {visibleProjects < projectData.length && (
                 <div className="text-center mt-4">
                     <button className="btn btn-primary load-more-btn" onClick={loadMoreProjects}>
