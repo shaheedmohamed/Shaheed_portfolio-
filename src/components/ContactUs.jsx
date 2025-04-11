@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 const ContactUs = () => {
     const form = useRef();
@@ -44,8 +45,20 @@ const ContactUs = () => {
                                 Fill in the form below and we’ll get back to you
                                 as soon as possible.
                             </p>
-                            <form ref={form} onSubmit={sendEmail}>
-                                <div className="mb-3">
+
+                            <motion.form
+                                ref={form}
+                                onSubmit={sendEmail}
+                                initial={{ opacity: 0, y: 50 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 1, delay: 0.5 }}
+                            >
+                                <motion.div
+                                    className="mb-3"
+                                    initial={{ opacity: 0, x: -50 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.8, delay: 0.6 }}
+                                >
                                     <label className="form-label">Name</label>
                                     <input
                                         type="text"
@@ -54,9 +67,14 @@ const ContactUs = () => {
                                         placeholder="Enter your name"
                                         required
                                     />
-                                </div>
+                                </motion.div>
 
-                                <div className="mb-3">
+                                <motion.div
+                                    className="mb-3"
+                                    initial={{ opacity: 0, x: -50 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.8, delay: 0.7 }}
+                                >
                                     <label className="form-label">Email</label>
                                     <input
                                         type="email"
@@ -65,12 +83,15 @@ const ContactUs = () => {
                                         placeholder="Enter your email"
                                         required
                                     />
-                                </div>
+                                </motion.div>
 
-                                <div className="mb-3">
-                                    <label className="form-label">
-                                        Mobile Number
-                                    </label>
+                                <motion.div
+                                    className="mb-3"
+                                    initial={{ opacity: 0, x: -50 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.8, delay: 0.8 }}
+                                >
+                                    <label className="form-label">Mobile Number</label>
                                     <input
                                         type="tel"
                                         name="user_mobile"
@@ -78,12 +99,15 @@ const ContactUs = () => {
                                         placeholder="Enter your mobile number"
                                         required
                                     />
-                                </div>
+                                </motion.div>
 
-                                <div className="mb-3">
-                                    <label className="form-label">
-                                        Message
-                                    </label>
+                                <motion.div
+                                    className="mb-3"
+                                    initial={{ opacity: 0, x: -50 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.8, delay: 0.9 }}
+                                >
+                                    <label className="form-label">Message</label>
                                     <textarea
                                         name="message"
                                         rows="5"
@@ -91,17 +115,19 @@ const ContactUs = () => {
                                         placeholder="Type your message..."
                                         required
                                     ></textarea>
-                                </div>
+                                </motion.div>
 
-                                <div className="d-grid">
-                                    <button
-                                        type="submit"
-                                        className="btn btn-primary btn-lg"
-                                    >
+                                <motion.div
+                                    className="d-grid"
+                                    initial={{ opacity: 0, scale: 0.5 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    transition={{ duration: 0.8, delay: 1 }}
+                                >
+                                    <button type="submit" className="btn btn-primary btn-lg">
                                         Send Message
                                     </button>
-                                </div>
-                            </form>
+                                </motion.div>
+                            </motion.form>
                         </div>
                     </div>
                 </div>

@@ -122,3 +122,53 @@
     background-color: #0056b3;
     transform: scale(1.05);
 }
+
+/* Skeleton Loader Styles */
+.skeleton-card {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skeleton-img {
+    height: 200px;
+    background-color: #e0e0e0;
+    animation: skeleton-loading 1.2s infinite ease-in-out;
+}
+
+.skeleton-text {
+    padding: 16px;
+}
+
+.skeleton-line {
+    background-color: #e0e0e0;
+    height: 10px;
+    margin: 8px 0;
+    animation: skeleton-loading 1.2s infinite ease-in-out;
+}
+
+.skeleton-title {
+    width: 70%;
+}
+
+.skeleton-meta {
+    width: 40%;
+}
+
+.skeleton-date {
+    width: 30%;
+}
+
+/* Skeleton Animation */
+@keyframes skeleton-loading {
+    0% {
+        background-color: #e0e0e0;
+    }
+    50% {
+        background-color: #f0f0f0;
+    }
+    100% {
+        background-color: #e0e0e0;
+    }
+}
