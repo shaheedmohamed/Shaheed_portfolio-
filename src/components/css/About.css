@@ -76,3 +76,10 @@
         font-size: 1rem;
     }
 }
+@media (max-width: 480px) {
+    .about-us-section {
+        position: relative;
+        top: -150px;
+    }
+
+}

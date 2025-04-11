@@ -6,6 +6,7 @@ import {
     FaYoutube,
     FaLinkedin,
 } from "react-icons/fa";
+import "./css/Footer.css";
 
 const Footer = () => {
     return (
@@ -13,7 +14,7 @@ const Footer = () => {
             <Container className="text-center ">
                 <Col className="d-flex justify-content-between">
                         <p className="mb-0">
-                            &copy; 2025 Shaheed Mohamed. |
+                            &copy; 2025 Shaheed  |
                             <a target="__blank"
                                 href="https://mostaql.com/u/shahid-1"
                                 className="text-light ms-2"
