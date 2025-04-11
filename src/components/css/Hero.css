@@ -1,4 +1,4 @@
-/* Default Styles */
+
 .hero-section {
     display: flex;
     justify-content: space-between;
@@ -12,7 +12,7 @@
     flex: 1;
     padding-right: 20px;
     position: relative;
-    z-index: 2;  /* Ensure text is above the image */
+    z-index: 2;  
 }
 
 .content h3, .content h1, .content h2 {
@@ -50,17 +50,17 @@
     margin-left: 10px;
 }
 
-/* Image Section */
+
 .image img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    transition: opacity 0.3s ease;  /* Smooth transition for opacity */
+    transition: opacity 0.3s ease;  
 }
 
-/* Media Queries */
 
-/* For mobile devices */
+
+
 @media (max-width: 480px) {
     .hero-section {
         display: none;

@@ -1,10 +1,10 @@
 
-/* تأكد أن الصفحة لا تتأثر بالمحتوى المثبت */
+
 body {
-    padding-top: 60px; /* اجعل الهامش العلوي يتناسب مع ارتفاع الـ navbar */
+    padding-top: 60px; 
 }
 
-/* زر التبديل بين الوضعين */
+
 .theme-toggle {
     background: none;
     border: none;
@@ -18,35 +18,35 @@ body {
     color: var(--highlight-color);
 }
 
-/* الوضع الداكن والفاتح */
+
 :root {
     --navbar-bg: #f8f9fa;
     --text-color: #333;
     --highlight-color: #007bff;
 }
 
-/* Transition Smooth */
+
 body {
     transition: all 0.4s ease;
 }
 
-/* Dark Mode Base */
+
 .dark-mode {
     background-color: #121212 !important;
     color: #f5f5f5 !important;
 }
 
-/* Dark Navbar */
+
 .dark-mode .navbar {
     background-color: #1f1f1f !important;
 }
 
-/* Dark links */
+
 .dark-mode .nav-link {
     color: #f5f5f5 !important;
 }
 
-/* Sections */
+
 .dark-mode section,
 .dark-mode .container,
 .dark-mode .row,
@@ -57,7 +57,7 @@ body {
     color: #f5f5f5 !important;
 }
 
-/* Optional: Dark mode for buttons */
+
 .dark-mode .btn {
     border-color: #f5f5f5;
     color: #f5f5f5;
@@ -232,7 +232,7 @@ body {
     color: black;
 }
 
-/* For mobile devices */
+
 @media (max-width: 480px) {
     .hero-section {
         flex-direction: column;
@@ -241,19 +241,19 @@ body {
         position: relative;
     }
 
-    /* Hide content section on mobile */
+    
     .content {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
-        z-index: 3; /* Ensure content is above image */
+        z-index: 3; 
     }
 
-    /* Reduce opacity of the image on mobile */
+    
     .image img {
-        opacity: 0.5;  /* Reduce opacity */
+        opacity: 0.5;  
     }
 }
 

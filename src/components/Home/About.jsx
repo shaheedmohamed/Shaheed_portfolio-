@@ -9,7 +9,7 @@ const AboutUs = () => {
         
         <Container className="about-us-section py-5">
             <Row className="align-items-center">
-                {/* النصوص */}
+                
                 <Col md={6}>
                     <h2 className="section-title">
                         <span className="underline">About <a target="__blank" href="https://mostaql.com/u/shahid-1">Shaheed</a> </span>

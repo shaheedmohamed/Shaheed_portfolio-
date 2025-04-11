@@ -34,7 +34,7 @@ const HeroSection = () => {
                 <h2><span ref={el}></span></h2>
                 
                 <div className="buttons">
-                    <a href="https://mostaql.com/u/shahid-1" className="btn">Go to Mostaql</a>
+                    <a target='_blank' href="https://mostaql.com/u/shahid-1" className="btn">Go to Mostaql</a>
                     
                 </div>
             </motion.div>
