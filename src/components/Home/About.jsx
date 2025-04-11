@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { FaInfoCircle } from "react-icons/fa";
 import "../css/About.css";
+import shaheed from"../shaheed.png";
 
 const AboutUs = () => {
 
@@ -54,7 +55,8 @@ const AboutUs = () => {
                 <Col md={6} className="text-center">
                     <div className="video-container">
                         <img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHKrUKEg36MawWctKqSMgutsdjWK0PI-Ncfg&s"
+                            src={shaheed}
+                            style={{ width: "60%", height: "60%" }}
                             alt="About Us"
                             className="img-fluid "
                         />

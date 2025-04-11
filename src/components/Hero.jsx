@@ -22,7 +22,7 @@ const HeroSection = () => {
     }, []);
 
     return (
-        <section className="hero-section" id="home">
+        <section className="hero-section " id="home">
             <motion.div 
                 className="content"
                 initial={{ opacity: 0, x: -50 }}
