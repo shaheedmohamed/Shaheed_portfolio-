@@ -4,9 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+<<<<<<< HEAD
 import './components/css/contactus.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+=======
+>>>>>>> b383528ac2af14bd756cd1b11dda2d4979f3feca
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

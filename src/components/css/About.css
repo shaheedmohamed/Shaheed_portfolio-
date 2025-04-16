@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /* About Us Page Styling */
 .about-us-wrapper {
@@ -545,3 +546,90 @@
       width: 100%;
     }
   }
+=======
+.about-us-section {
+    background-color: #f8f9fa;
+    margin-top: 100px;
+    padding: 50px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+.section-title {
+    font-weight: bold;
+    color: #13294b;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.section-title > span > a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.underline {
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 5px;
+}
+
+
+.section-text {
+    color: #555;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+.section-subtitle {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #0a2b59;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+.icon {
+    color: #007bff;
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+
+.video-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+
+.about-us-section p:hover {
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .section-text {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 480px) {
+    .about-us-section {
+        position: relative;
+        top: -150px;
+    }
+
+}
+>>>>>>> b383528ac2af14bd756cd1b11dda2d4979f3feca

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 @import "tailwindcss";
 body {
     padding-top: 60px; 
@@ -12,6 +13,13 @@ body {
     z-index: -1; /* خلف كل المحتوى */
   }
   
+=======
+
+body {
+    padding-top: 60px; 
+}
+
+>>>>>>> b383528ac2af14bd756cd1b11dda2d4979f3feca
 
 .theme-toggle {
     background: none;

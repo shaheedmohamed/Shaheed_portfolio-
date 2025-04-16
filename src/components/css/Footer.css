@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 @import "tailwindcss";
+=======
+>>>>>>> b383528ac2af14bd756cd1b11dda2d4979f3feca
 @media (max-width: 480px) {
     footer{
         position: relative;
