@@ -1,0 +1,125 @@
+@import "tailwindcss";
+.hero-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 80px;
+    background: #f4f4f4;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .content {
+    flex: 1;
+    z-index: 2;
+  }
+  
+  .content h3,
+  .content h1,
+  .content h2 {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .content h3 {
+    font-size: 1.5rem;
+    color: #444;
+  }
+  
+  .content h1 {
+    font-size: 3rem;
+    color: #111;
+    margin: 10px 0;
+  }
+  
+  .content h2 {
+    font-size: 1.5rem;
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  .buttons {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #005dc5;
+  }
+  
+  .image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 450px;
+    border-radius: 10px;
+  }
+  
+  /* Tablets */
+  @media (max-width: 1024px) {
+    .hero-section {
+      flex-direction: column-reverse;
+      padding: 40px;
+      text-align: center;
+    }
+  
+    .content h1 {
+      font-size: 2.5rem;
+    }
+  
+    .content h2 {
+      font-size: 1.3rem;
+    }
+  
+    .image img {
+      max-height: 350px;
+    }
+  }
+  
+  /* Phones */
+  @media (max-width: 600px) {
+    .hero-section {
+      padding: 30px 20px;
+    }
+  
+    .content h3 {
+      font-size: 1.2rem;
+    }
+  
+    .content h1 {
+      font-size: 2rem;
+    }
+  
+    .content h2 {
+      font-size: 1.1rem;
+    }
+  
+    .btn {
+      font-size: 13px;
+      padding: 10px 20px;
+    }
+  
+    .image img {
+      max-height: 280px;
+    }
+  }
+  
