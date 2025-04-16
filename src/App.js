@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 <<<<<<< HEAD
 // import Navbar from "./components/NavBar";
 import './index.css'; // تأكد إن دي موجودة
+// shaheed
 import Nav from './components/Nav.jsx';
 =======
 import Navbar from "./components/NavBar";
