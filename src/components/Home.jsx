@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./NavBar";
 import HeroSection from "./Hero";
 import Projects from "./ProjectHome";
-import AboutUs from "./Home/About";
+import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
 import Skills from "./SkilsHome";
+import ParticlesContainer from './ParticlesContainer';
 import "./css/Home.css";
 
 function Home() {
@@ -25,7 +26,8 @@ function Home() {
                 </div>
             ) : (
                 <>
-                    <Navbar />
+                    
+                    
                     <HeroSection />
                     <AboutUs />
                     <Projects />

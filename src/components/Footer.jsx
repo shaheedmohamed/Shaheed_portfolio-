@@ -24,10 +24,10 @@ const Footer = () => {
                         </p>
 
                         <div className="d-flex justify-content-center gap-3">
-                            <a target="__blank" href="#" title="insta" className="social-icon">
+                            <a target="__blank" href="https://www.youtube.com/@Al-shaheed-o2e" title="insta" className="social-icon">
                                 <FaInstagram size={24} />
                             </a>
-                            <a target="__blank" href="" title="facebook" className="social-icon">
+                            <a target="__blank" href="https://www.youtube.com/@Al-shaheed-o2e" title="facebook" className="social-icon">
                                 <FaFacebook size={24} />
                             </a>
                             <a target="__blank" href="https://www.youtube.com/@Al-shaheed-o2e" className="social-icon">

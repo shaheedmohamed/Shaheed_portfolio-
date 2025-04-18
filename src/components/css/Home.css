@@ -1,21 +1,14 @@
-<<<<<<< HEAD
 @import "tailwindcss";
-=======
-
->>>>>>> b383528ac2af14bd756cd1b11dda2d4979f3feca
 @keyframes spinner {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-<<<<<<< HEAD
 body {
   margin: 0;
   padding: 0;
   height: 50px;
   overflow-x: hidden;
 }
-=======
->>>>>>> b383528ac2af14bd756cd1b11dda2d4979f3feca
 
 .loading-container {
     position: fixed;
