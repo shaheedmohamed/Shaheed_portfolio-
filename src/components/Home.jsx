@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "./NavBar";
-import HeroSection from "./Hero";
 import Projects from "./ProjectHome";
 import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
 import Skills from "./SkilsHome";
-import ParticlesContainer from './ParticlesContainer';
 import "./css/Home.css";
 
 function Home() {
@@ -15,7 +12,7 @@ function Home() {
         
         setTimeout(() => {
             setLoading(false);
-        }, 2000); 
+        }, 1000); 
     }, []);
 
     return (
@@ -28,7 +25,6 @@ function Home() {
                 <>
                     
                     
-                    <HeroSection />
                     <AboutUs />
                     <Projects />
                     <Skills />

@@ -1,8 +1,6 @@
-import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import Navbar from "./components/NavBar";
-import './index.css'; // تأكد إن دي موجودة
+import './index.css'; 
 import Nav from './components/Nav.jsx';
 import AboutUs from "./components/AboutUs.jsx";
 import Projects from "./components/ProjectHome.jsx";
@@ -17,15 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AboutDetails from "./components/about-details.jsx";
 
 function App() {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = "https://embed.tawk.to/67bdc268197a90190fc5c739/1ikujuqnc";
-    script.charset = "UTF-8";
-    script.setAttribute("crossorigin", "*");
-    document.body.appendChild(script);
-  }, []);
-
+  
   return (
     <Router>
       <ParticlesContainer />
