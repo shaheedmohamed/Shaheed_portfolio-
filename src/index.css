@@ -1,8 +1,18 @@
 @import "tailwindcss";
+
+:root {
+  --bg: #f8fafc;            /* light background */
+  --text-color: #0f172a;    /* slate-900 */
+  --card-bg: #ffffff;       /* white */
+  --muted: #64748b;         /* slate-500 */
+  --primary: #4f46e5;       /* indigo-600 */
+  --ring: rgba(79,70,229,0.25);
+  --sidebar-bg: var(--bg);
+}
 body {
   margin: 0;
   padding: 0;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s ease, color 0.3s ease;
   background: var(--sidebar-bg);
   color: var(--text-color);
 }
@@ -10,4 +20,33 @@ body {
 .content {
   margin-left: 250px; 
   padding: 20px;
+}
+
+/* Surface theming for Bootstrap elements */
+.card,
+.accordion,
+.accordion-item,
+.modal-content,
+.dropdown-menu,
+.list-group-item,
+.offcanvas,
+.toast {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+}
+
+.accordion-button {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+}
+
+.text-muted { color: var(--muted) !important; }
+
+.btn-outline-primary {
+  color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+.btn-outline-primary:hover {
+  background: var(--primary) !important;
+  color: #fff !important;
 }

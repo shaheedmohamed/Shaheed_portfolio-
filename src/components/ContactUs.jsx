@@ -1,38 +1,58 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion, AnimatePresence } from "framer-motion";
+
+const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID || "service_gghjpo9";
+const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || "template_ebxv1qp";
+const PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || "Fxyft61q0E-XFjhYd";
 
 const ContactUs = () => {
     const form = useRef();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState(null);
+    const [submitError, setSubmitError] = useState("");
     const [formFocus, setFormFocus] = useState(null);
+    const [timeNow, setTimeNow] = useState("");
 
-    const sendEmail = (e) => {
+    // Ensure EmailJS is initialized once with the public key
+    useEffect(() => {
+        try {
+            if (!process.env.REACT_APP_EMAILJS_PUBLIC_KEY) {
+                console.warn("[EmailJS] Using fallback PUBLIC_KEY from source. Consider moving to .env");
+            }
+            emailjs.init({ publicKey: PUBLIC_KEY });
+        } catch (err) {
+            console.error("EmailJS init failed", err);
+        }
+        setTimeNow(new Date().toLocaleString());
+    }, []);
+
+    const sendEmail = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
-
-        emailjs
-            .sendForm(
-                "service_gghjpo9",
-                "template_ox59omk",
-                form.current,
-                "Fxyft61q0E-XFjhYd"
-            )
-            .then(
-                (result) => {
-                    setSubmitStatus("success");
-                    form.current.reset();
-                    setTimeout(() => setSubmitStatus(null), 5000);
-                },
-                (error) => {
-                    setSubmitStatus("error");
-                    setTimeout(() => setSubmitStatus(null), 5000);
-                }
-            )
-            .finally(() => {
-                setIsSubmitting(false);
-            });
+        setSubmitError("");
+        try {
+            if (!process.env.REACT_APP_EMAILJS_SERVICE_ID || !process.env.REACT_APP_EMAILJS_TEMPLATE_ID) {
+                console.warn("[EmailJS] Using fallback SERVICE_ID/TEMPLATE_ID from source. Consider moving to .env");
+            }
+            const result = await emailjs.sendForm(
+                SERVICE_ID,
+                TEMPLATE_ID,
+                form.current
+            );
+            console.log("EmailJS success:", result);
+            setSubmitStatus("success");
+            form.current?.reset();
+            setTimeout(() => setSubmitStatus(null), 5000);
+        } catch (error) {
+            console.error("EmailJS error:", error);
+            setSubmitStatus("error");
+            const msg = (error && (error.text || error.message)) ? String(error.text || error.message) : "Failed to send. Please verify EmailJS Service ID, Template ID, and Public Key.";
+            setSubmitError(msg);
+            setTimeout(() => setSubmitStatus(null), 6000);
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const containerVariants = {
@@ -40,40 +60,39 @@ const ContactUs = () => {
         visible: {
             opacity: 1,
             transition: {
-                delayChildren: 0.3,
-                staggerChildren: 0.2
+                delayChildren: 0.15,
+                staggerChildren: 0.12,
+                ease: "easeOut"
             }
         }
     };
 
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+        hidden: { y: 12, opacity: 0 },
         visible: {
             y: 0,
-            opacity: 1
+            opacity: 1,
+            transition: { duration: 0.45, ease: "easeOut" }
         }
     };
 
     const buttonVariants = {
         initial: { scale: 1 },
-        hover: { 
-            scale: 1.05,
-            boxShadow: "0px 8px 20px rgba(79, 70, 229, 0.4)",
-            transition: { 
-                type: "spring", 
-                stiffness: 400, 
-                damping: 10 
-            }
+        hover: {
+            y: -1,
+            scale: 1.02,
+            boxShadow: "0 10px 24px rgba(79,70,229,0.25)",
+            transition: { duration: 0.2 }
         },
-        tap: { scale: 0.95 },
+        tap: { scale: 0.97 },
         submitting: {
-            scale: [1, 1.05, 1],
-            boxShadow: ["0px 4px 12px rgba(79, 70, 229, 0.3)", "0px 8px 20px rgba(79, 70, 229, 0.5)", "0px 4px 12px rgba(79, 70, 229, 0.3)"],
-            transition: {
-                repeat: Infinity,
-                repeatType: "reverse",
-                duration: 0.8
-            }
+            scale: [1, 1.02, 1],
+            boxShadow: [
+                "0 6px 16px rgba(79,70,229,0.25)",
+                "0 10px 24px rgba(79,70,229,0.35)",
+                "0 6px 16px rgba(79,70,229,0.25)"
+            ],
+            transition: { repeat: Infinity, repeatType: "reverse", duration: 1.2 }
         }
     };
 
@@ -81,7 +100,7 @@ const ContactUs = () => {
         initial: { backgroundPosition: "0% 0%" },
         animate: {
             backgroundPosition: "100% 100%",
-            transition: { duration: 20, ease: "linear", repeat: Infinity, repeatType: "reverse" }
+            transition: { duration: 30, ease: "linear", repeat: Infinity, repeatType: "reverse" }
         }
     };
 
@@ -184,7 +203,7 @@ const ContactUs = () => {
                                     </div>
                                     <div>
                                         <h5 className="fw-bold mb-1">Email Address</h5>
-                                        <p className="mb-0 text-muted">shaheed@gmail.com</p>
+                                        <p className="mb-0 text-muted">shaheedmhmed@gmail.com</p>
                                     </div>
                                 </div>
                             </motion.div>
@@ -215,7 +234,7 @@ const ContactUs = () => {
 
 
 <div className="mt-5">
-  <h5 className="mb-3">Connect With ME</h5>
+  <h5 className="mb-3">Connect with me</h5>
   <div className="d-flex flex-wrap">
     {[
   { name: 'facebook', icon: 'fa-facebook-f', color: '#3b5998', link: 'https://facebook.com' },
@@ -241,11 +260,7 @@ const ContactUs = () => {
       justifyContent: "center",
       boxShadow: "0 4px 8px rgba(0,0,0,0.1)"
     }}
-    whileHover={{
-      y: -5,
-      boxShadow: "0px 10px 15px rgba(0,0,0,0.15)",
-      scale: 1.1
-    }}
+    whileHover={{ y: -4, rotate: 1, boxShadow: "0px 12px 18px rgba(0,0,0,0.18)", scale: 1.08 }}
     whileTap={{ scale: 0.95 }}
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
@@ -343,6 +358,8 @@ const ContactUs = () => {
                                     variants={containerVariants}
                                     className="mt-4"
                                 >
+                                    {/* Hidden time field for template */}
+                                    <input type="hidden" name="time" value={timeNow} />
                                     <motion.div
                                         className={`form-group mb-4 position-relative ${formFocus === 'name' ? 'focused' : ''}`}
                                         variants={itemVariants}
@@ -522,8 +539,8 @@ const ContactUs = () => {
                                                     <i className="fas fa-exclamation-triangle text-danger"></i>
                                                 </div>
                                                 <div>
-                                                    <h5 className="mb-0">Error Sending Message</h5>
-                                                    <p className="mb-0 small">Please try again later or contact Me directly.</p>
+                                                    <h5 className="mb-1">Error Sending Message</h5>
+                                                    <p className="mb-0 small">{submitError || 'Please try again later or contact me directly.'}</p>
                                                 </div>
                                             </div>
                                         </motion.div>

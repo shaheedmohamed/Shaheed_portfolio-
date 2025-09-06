@@ -14,7 +14,7 @@ import './css/Nav.css'; // تأكد من استيراد ملف CSS
 const navData = [
   { name: 'home', path: '/', icon: <HiHome /> },
   { name: 'about', path: '/about', icon: <HiUser /> },
-  { name: 'services', path: '/about-details', icon: <HiRectangleGroup /> },
+  { name: 'services', path: '/about', icon: <HiRectangleGroup /> },
   { name: 'projects', path: '/projects', icon: <HiViewColumns /> },
   {
     name: 'testimonials',
@@ -39,9 +39,7 @@ const Nav = () => {
           <Link
             to={link.path}
             key={index}
-            className={`nav-link ${
-              pathname === link.path ? 'active' : ''
-            }`}
+            className={`nav-link ${pathname === link.path ? 'active' : ''}`}
           >
             <div className="tooltip">
               <div className="tooltip-box">{link.name}</div>

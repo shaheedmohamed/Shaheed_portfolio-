@@ -115,10 +115,10 @@ const AboutUs = () => {
                 </h2>
                 <div className="title-separator mb-4"></div>
                 <motion.p className="section-text mb-4" variants={fadeInUp}>
-                  I am Shahid Muhammad, a passionate Full Stack Developer with over 2 years of experience crafting beautiful, functional, and user-centered digital experiences.
+                  I am Shaheed, a Full Stack Developer from Egypt. I work across Laravel, Vue.js, React, JavaScript, PHP, SQL and Tailwind CSS to ship clean, scalable and secure products.
                 </motion.p>
                 <motion.p className="section-text" variants={fadeInUp}>
-                  I specialize in crafting responsive user interfaces using modern frontend technologies paired with powerful backend solutions to deliver complete web applications that make an impact.
+                  I build complete solutions from scratch: authentication flows, dashboards, APIs, e‑commerce, quizzes, booking systems and payment gateways — with modern, responsive UI.
                 </motion.p>
                 
                 <motion.div 
@@ -290,7 +290,7 @@ const AboutUs = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link to="/about-details" className="read-more-button">
+                <Link to="/about#details" className="read-more-button">
                   Explore More About Me <FaArrowRight className="ms-2" />
                 </Link>
               </motion.div>

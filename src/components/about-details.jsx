@@ -417,7 +417,7 @@ const AboutDetails = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                <Link to={"/projects"}>
+                <Link className="text-light" to={"/projects"}>
                   Get In Touch
                 </Link>
                 </motion.button>

@@ -16,8 +16,9 @@ const ParticlesContainer = () => {
       init={particlesInit}
       loaded={particlesLoaded}
       className="particles-bg"
+      style={{ pointerEvents: 'none' }}
       options={{
-        fullscreen: { enable: true, zIndex: -1 }, 
+        fullscreen: { enable: true, zIndex: -10 }, 
         background: {
           color: {
             value: '', 
@@ -26,14 +27,8 @@ const ParticlesContainer = () => {
         fpsLimit: 60, 
         interactivity: {
           events: {
-            onClick: {
-              enable: false, 
-              mode: 'push', 
-            },
-            onHover: {
-              enable: true,
-              mode: 'repulse', 
-            },
+            onClick: { enable: false },
+            onHover: { enable: false },
             resize: true,
           },
           modes: {
@@ -54,7 +49,7 @@ const ParticlesContainer = () => {
             color: '#f5d393',
             distance: 150,
             enable: true,
-            opacity: 0.5,
+            opacity: 0.35,
             width: 1,
           },
           collisions: {
@@ -67,7 +62,7 @@ const ParticlesContainer = () => {
               default: 'bounce', 
             },
             random: false,
-            speed: 0.8, 
+            speed: 0.6, 
             straight: false,
           },
           number: {
@@ -75,10 +70,10 @@ const ParticlesContainer = () => {
               enable: true,
               area: 800, 
             },
-            value: 50, 
+            value: 45, 
           },
           opacity: {
-            value: 0.5, 
+            value: 0.35, 
           },
           shape: {
             type: 'circle', 

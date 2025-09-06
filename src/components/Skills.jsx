@@ -8,8 +8,10 @@ import {
     FaBootstrap,
     FaLaravel,
     FaVuejs,
-    FaNodeJs,
+    FaPhp,
+    FaDatabase,
 } from "react-icons/fa";
+import { SiTailwindcss, SiMysql, SiMongodb } from "react-icons/si";
 import "./css/Skills.css";
 import { Link } from "react-router-dom";
 
@@ -17,14 +19,18 @@ const Skills = () => {
     const [loading, setLoading] = useState(true);
 
     const skills = [
-        { name: "HTML", level: 90, icon: <FaHtml5 color="#e34c26" className="skill-icon" /> },
-        { name: "CSS", level: 85, icon: <FaCss3Alt color="#264de4" className="skill-icon" /> },
-        { name: "JavaScript", level: 80, icon: <FaJs color="#f0db4f" className="skill-icon" /> },
-        { name: "ReactJS", level: 75, icon: <FaReact color="#61DBFB" className="skill-icon" /> },
-        { name: "Bootstrap", level: 85, icon: <FaBootstrap color="#563d7c" className="skill-icon" /> },
-        { name: "Laravel", level: 85, icon: <FaLaravel color="#ff2d20" className="skill-icon" /> },
-        { name: "VueJS", level: 85, icon: <FaVuejs color="#42b883" className="skill-icon" /> },
-        { name: "Node.js", level: 30, icon: <FaNodeJs color="#3c873a" className="skill-icon" /> },
+        { name: "JavaScript", level: 90, icon: <FaJs color="#f0db4f" className="skill-icon" /> },
+        { name: "React", level: 88, icon: <FaReact color="#61DBFB" className="skill-icon" /> },
+        { name: "Vue.js", level: 85, icon: <FaVuejs color="#42b883" className="skill-icon" /> },
+        { name: "Laravel", level: 88, icon: <FaLaravel color="#ff2d20" className="skill-icon" /> },
+        { name: "PHP", level: 85, icon: <FaPhp color="#777bb3" className="skill-icon" /> },
+        { name: "Tailwind CSS", level: 85, icon: <SiTailwindcss color="#38B2AC" className="skill-icon" /> },
+        { name: "Bootstrap", level: 82, icon: <FaBootstrap color="#563d7c" className="skill-icon" /> },
+        { name: "MySQL", level: 80, icon: <SiMysql color="#4479A1" className="skill-icon" /> },
+        { name: "MongoDB", level: 70, icon: <SiMongodb color="#10a04a" className="skill-icon" /> },
+        { name: "HTML", level: 95, icon: <FaHtml5 color="#e34c26" className="skill-icon" /> },
+        { name: "CSS", level: 90, icon: <FaCss3Alt color="#264de4" className="skill-icon" /> },
+        { name: "SQL", level: 78, icon: <FaDatabase color="#6b7280" className="skill-icon" /> },
     ];
 
     
@@ -36,7 +42,7 @@ const Skills = () => {
 
     return (
         <section className="container py-5">
-            <h2 className="text-center mb-3">🚀 My web development skills</h2>
+            <h2 className="text-center mb-3">🚀 My Full‑Stack Skillset</h2>
             <p className="text-center mb-4 ">
                 From clean HTML to building full-fledged apps - these are the
                 skills and languages ​​I use to bring ideas to life 💻✨
