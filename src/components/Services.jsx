@@ -122,7 +122,7 @@ export default function Services() {
       {/* Process */}
       <section className="mt-5">
         <h3 className="fw-bold mb-3">Process</h3>
-        <div className="row g-4">
+        <div className="row g-4 justify-content-between">
           {[
             { icon: 'fa-comments', title: 'Discovery', text: 'Requirements, scope, and success criteria.' },
             { icon: 'fa-diagram-project', title: 'Design & Plan', text: 'Architecture, data models, and UI flow.' },
@@ -154,7 +154,11 @@ export default function Services() {
       <section className="mt-5">
         <h3 className="fw-bold mb-3">Tech Stack</h3>
         <div className="d-flex flex-wrap gap-2">
-          {['Laravel','Vue','React','Tailwind CSS','Bootstrap','MySQL','MongoDB'].map(t => (
+          {[
+            'Laravel','PHP','Vue','React','JavaScript','TypeScript',
+            'Tailwind CSS','Bootstrap','Redux','Node.js','Express',
+            'REST APIs','Stripe','MySQL','MongoDB','Git','Docker','CI/CD'
+          ].map(t => (
             <span key={t} className="badge text-bg-light border">{t}</span>
           ))}
         </div>
