@@ -14,7 +14,7 @@ import './css/Nav.css'; // تأكد من استيراد ملف CSS
 const navData = [
   { name: 'home', path: '/', icon: <HiHome /> },
   { name: 'about', path: '/about', icon: <HiUser /> },
-  { name: 'services', path: '/about', icon: <HiRectangleGroup /> },
+  { name: 'services', path: '/services', icon: <HiRectangleGroup /> },
   { name: 'projects', path: '/projects', icon: <HiViewColumns /> },
   {
     name: 'testimonials',

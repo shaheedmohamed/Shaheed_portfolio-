@@ -158,16 +158,23 @@ export default function Landing() {
               </div>
 
               {/* Placeholder preview blocks */}
-              <div className="ratio ratio-16x9 rounded-3 mb-3" style={{ background: "#eef2ff" }} />
+              <div className="ratio ratio-16x9 rounded-3 mb-3 overflow-hidden" style={{ background: "#eef2ff" }}>
+                <img
+                  src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?q=80&w=1200&auto=format&fit=crop"
+                  alt="Programming preview"
+                  className="w-100 h-100"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
               <div className="d-flex gap-2">
                 <div className="flex-grow-1 rounded-3" style={{ height: 10, background: "#e5e7eb" }} />
                 <div className="rounded-3" style={{ width: 60, height: 10, background: "#e5e7eb" }} />
               </div>
 
               <div className="d-flex gap-2 mt-3">
+                <span className="badge text-bg-light border">Laravel</span>
+                <span className="badge text-bg-light border">Vue</span>
                 <span className="badge text-bg-light border">React</span>
-                <span className="badge text-bg-light border">Bootstrap</span>
-                <span className="badge text-bg-light border">Framer Motion</span>
               </div>
             </div>
           </motion.div>
